@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- root variables ---------- */
+:root {
+  --skrift: #000000;
+  --darkGray: #262626;
+  --bg: #fbfbfb;
+  --gray: #a3a3a3;
+  --red: #A01518;
+  --redTrans: rgba(160, 21, 24, 0.7);
+  --offRed: #973638;
+}
+
+/* ===================================== general styling ===================================== */
+
+html {
+  color: var(--skrift);
+  font-family: 'Raleway', sans-serif;
+
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+header {
+  background-color: var(--gray);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--skrift);
+  text-decoration: none;
+}
+
+h1 {
+  font-family: co-headline, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3em;
+}
+
+.page {
+  overflow: hidden;
+  display: block;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 7em 0.5em;
+}
+
+/* ===================================== NAVIGATION ===================================== */
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--skrift);
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  left: 100%;
+  top: 70px;
+  /*gap: 0;*/
+  flex-direction: column;
+  background-color: var(--gray);
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+
+/* -------------- media query tablet --------------- */
+@media screen and (max-width: 950px) and (min-width: 672px) {}
+
+
+/* ------- media query (ipad pro +) laptop --------- */
+@media screen and (min-width: 950px) {
+  .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+      position: inherit;
+      padding-left: 60%;
+  }
+
+  .nav-link {
+      /*Hover effect*/
+      transition: 0.7s ease;
+  }
+
+  .nav-link:hover {
+      /*Hover effect*/
+      color: blue;
+  }
+
+  .hamburger {
+      display: none;
+  }
+
+
+}
+
+
+/* ===================================== Billeder ===================================== */
+
+#billedeFigur {
+  border-top: 12em solid;
+  border-right: 6em solid transparent;
+  width: 74%;
+  
+}
+
+.home-billede1 {
+  background-image: url(../img/kids.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+

@@ -4,8 +4,9 @@
  */
 const _routes = {
 	"#/": "home",
-	"#/login": "login",
-	"#/medlemmer": "medlemmer"
+	// "#/login": "login",
+	"#/medlemmer": "medlemmer",
+	"#/404": "page-404"
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -33,11 +34,12 @@ export function navigateTo(path) {
  */
 function showPage(path) {
 	hideAllPages(); // hide all pages
+	console.log(_routes[path])
 	document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
 	if (path == "#/login" || path == "#/signup") {
-		showTabbar(false);
+		// showTabbar(false);
 	} else {
-		showTabbar(true);
+		// showTabbar(true);
 		setActiveTab(path);
 	}
 }

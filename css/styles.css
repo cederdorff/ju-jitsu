@@ -24,7 +24,8 @@ html {
 
 body {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-color: var(--bg);
 }
 
 
@@ -36,6 +37,7 @@ header {
   width: 100%;
   height: 70px;
   margin: 0;
+  z-index: 99;
 }
 
 li {
@@ -51,7 +53,19 @@ h1 {
   font-family: co-headline, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: co-headline, sans-serif;
+  font-style: normal;
+}
+
+video {
+  width: 100%;
+  margin-top: -42px;
+  position: relative;
+  z-index: -10;
 }
 
 .page {
@@ -62,7 +76,7 @@ h1 {
   background: var(--light-grey);
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
-  padding: 7em 0.5em;
+  padding: 7em 0;
 }
 
 .lil-button {
@@ -142,8 +156,6 @@ h1 {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-
-
 
 
 
@@ -230,7 +242,7 @@ h1 {
 }
 
 
-/* ===================================== Billeder ===================================== */
+/* ===================================== Landing page ===================================== */
 
 #billedeFigur {
   border-top: 12em solid;
@@ -243,4 +255,43 @@ h1 {
   background-image: url(../img/kids.jpg);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.redbox {
+  width: 83%;
+  margin-top: -6em;
+  position: relative;
+  z-index: 10;
+}
+
+.headline {
+  margin: -7.25em 1.5em 0 1.25em;
+  position: relative;
+  z-index: 11;
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ===================================== 404 ===================================== */
+
+.billede-404 {
+  display: block;
+  height: 400px;
+  margin: auto;
+  padding: 2em;
+}
+
+.h1-404 {
+  text-align: center;
+}
+
+.h2-404 {
+  text-align: center;
+}
+
+.link {
+  color: var(--red);
+  text-decoration: underline;
 }

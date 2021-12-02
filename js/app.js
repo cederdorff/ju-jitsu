@@ -10,14 +10,14 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyCI_VTBj8inrJWIjIYf_Y7bBpT9aRRQS1o",
-	authDomain: "user-app-289f1.firebaseapp.com",
-	databaseURL: "https://user-app-289f1.firebaseio.com",
-	projectId: "user-app-289f1",
-	storageBucket: "user-app-289f1.appspot.com",
-	messagingSenderId: "438369021654",
-	appId: "1:438369021654:web:8138ce7351d51603c0a377"
+    apiKey: "AIzaSyCCcbowFE6WkMAZJrrOwwzLEx4xLmdGJMY",
+    authDomain: "hjjn-edd00.firebaseapp.com",
+    projectId: "hjjn-edd00",
+    storageBucket: "hjjn-edd00.appspot.com",
+    messagingSenderId: "792163728984",
+    appId: "1:792163728984:web:7805af5d294f4346a6542d"
 };
+
 // Initialize Firebase
 initializeApp(firebaseConfig);
 const _auth = getAuth();

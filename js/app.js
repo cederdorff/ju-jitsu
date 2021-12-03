@@ -8,6 +8,7 @@ import {
 	createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
 
+// ========== FIREBASE SIGN IN FUNCTIONALITY ========== //
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCCcbowFE6WkMAZJrrOwwzLEx4xLmdGJMY",
@@ -17,7 +18,41 @@ const firebaseConfig = {
     messagingSenderId: "792163728984",
     appId: "1:792163728984:web:7805af5d294f4346a6542d"
 };
+ // ----------------------------------- login bage - det LM prøver på start --------------------------------- //
 
+ // Instialize Firebase
+firebaseConfig.initializeApp(firebaseConfig);
+
+//===== FIREBASE AUTH =====//
+firebaseConfig.auth().onAuthStateChanged(function(user) {
+	if (user) {
+		userAuthenticated(user);
+	} else {
+		userNotAuthenticated();
+	}
+});
+S
+function userAuthenticated(user) {
+	appendUserData(user);
+	showPage("#medlemmer");
+}
+
+function userNotAuthenticated() {
+	showpage("#loginSite");
+}
+
+const uiConfig = {
+	credentialHelper: firebaseConfig.auth.credentialHelper.NONE,
+	signeInOptions: [
+		firebase.signInWithEmailAndPassword
+	],
+	signInSuccessUrl: "#medlemmer"
+}
+
+const ui = new firebaseUi.auth.AuthUI(firebase.auth());
+ui.start("#firebaseui-auth-container", uiConfig);
+
+ // ----------------------------------- login bage - det LM prøver på slut --------------------------------- //
 // // Initialize Firebase
 // initializeApp(firebaseConfig);
 // const _auth = getAuth();

@@ -30,7 +30,7 @@ body {
 
 
 header {
-  background-color: var(--gray);
+  background-color: var(--bg);
   position: fixed;
   top: 0;
   right: 0;
@@ -53,12 +53,18 @@ h1 {
   font-family: co-headline, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 2.5em;
+  font-size: 2.25em;
+}
+
+.h1-black {
+  text-align: center;
+  font-size: 2em;
 }
 
 h2 {
   font-family: co-headline, sans-serif;
   font-style: normal;
+  font-size: 1.2em;
 }
 
 video {
@@ -66,6 +72,30 @@ video {
   margin-top: -42px;
   position: relative;
   z-index: -10;
+}
+
+hr {
+  background-color: var(--red);
+  height: 2px;
+  border: none;
+}
+
+article {
+  margin: 4em 1.5em;
+}
+
+button {
+  height: 40px;
+  width: 135px;
+  background-color: var(--offRed);
+  color: var(--bg);
+  border: none;
+  font-weight: 100;
+  font-size: 18px;
+  box-shadow: 0 2px 5px var(--gray);
+  display: block;
+  margin: 1.5em auto;
+  
 }
 
 .page {
@@ -80,13 +110,9 @@ video {
 }
 
 .lil-button {
-  height: 40px;
-  width: 135px;
   background-color: var(--red);
-  color: var(--bg);
-  border: none;
-  font-weight: 100;
   font-size: 18px;
+  margin: 0;
 }
 
 /* ===================================== NAVIGATION ===================================== */
@@ -133,7 +159,7 @@ video {
   top: 70px;
   /*gap: 0;*/
   flex-direction: column;
-  background-color: var(--gray);
+  background-color: var(--bg);
   width: 100%;
   text-align: center;
   transition: 0.3s;
@@ -206,7 +232,7 @@ video {
   display: none;
   position: relative;
   left: -50%;
-  background-color: var(--gray);
+  background-color: var(--bg);
   min-width: 180px;
   min-height: 220px;
 }
@@ -244,19 +270,6 @@ video {
 
 /* ===================================== Landing page ===================================== */
 
-#billedeFigur {
-  border-top: 12em solid;
-  border-right: 6em solid transparent;
-  width: 74%;
-
-}
-
-.home-billede1 {
-  background-image: url(../img/kids.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .redbox {
   width: 83%;
   margin-top: -6em;
@@ -265,13 +278,21 @@ video {
 }
 
 .headline {
-  margin: -7.25em 1.5em 0 1.25em;
+  margin: -7.25em 1.5em 5em 1.25em;
   position: relative;
   z-index: 11;
   color: var(--bg);
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.hold-billeder {
+  margin: 1.5em 0;
+}
+
+.billeder {
+  margin: 1.5em 0;
 }
 
 /* ===================================== 404 ===================================== */

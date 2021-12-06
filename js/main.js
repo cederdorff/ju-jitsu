@@ -15,3 +15,5 @@ document.querySelectorAll(".nav-link").forEach(n => n. //add en eventlistener
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
 }))
+
+

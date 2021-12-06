@@ -2,9 +2,9 @@
  * All routes of the SPA
  * "path": "id of page in DOM"
  */
-const _routes = {
+ const _routes = {
 	"#/": "home",
-	// "#/login": "login",
+	"#/login": "login",
 	"#/medlemmer": "medlemmer",
 	"#/404": "page-404"
 };
@@ -34,7 +34,7 @@ export function navigateTo(path) {
  */
 function showPage(path) {
 	hideAllPages(); // hide all pages
-	console.log(_routes[path])
+	console.log(_routes[path]);
 	document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
 	if (path == "#/login" || path == "#/signup") {
 		// showTabbar(false);

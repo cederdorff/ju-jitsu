@@ -95,7 +95,7 @@ button {
   box-shadow: 0 2px 5px var(--gray);
   display: block;
   margin: 1.5em auto;
-  
+
 }
 
 .page {
@@ -185,12 +185,176 @@ button {
 
 
 
+/* ===================================== Landing page ===================================== */
+
+.landing-video-desktop {
+ display: none;
+}
+
+.redbox {
+  width: 83%;
+  margin-top: -6em;
+  position: relative;
+  z-index: 10;
+}
+
+.subliner-desktop {
+  display: none;
+}
+
+.headline {
+  margin: -7em 1.5em 5em 1.25em;
+  position: relative;
+  z-index: 11;
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hold-billeder {
+  margin: 1.5em 0;
+}
+
+.billeder {
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+.holdnavn {
+  text-align: center;
+  margin: -4em 0 2em 0;
+  color: var(--bg);
+}
+
+/* ===================================== 404 ===================================== */
+
+.billede-404 {
+  display: block;
+  width: 60%;
+  /* height: 400px; // til desktop */
+  margin: auto;
+  padding: 2em;
+}
+
+.h1-404 {
+  text-align: center;
+}
+
+.h2-404 {
+  text-align: center;
+}
+
+.link {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+/* ===================================== Medlems siden ===================================== */
+
+.belt-liga {
+  min-height: 400px;
+}
+
+.belt-grid {
+  display: grid;
+  height: 600px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+  gap: 1.2em 0em;
+  grid-template-areas:
+    "belt-display . ."
+    "belt-display black-belt black-belt"
+    "belt-display brown-belt brown-belt"
+    "belt-display blue-belt blue-belt"
+    "belt-display green-belt green-belt"
+    "belt-display orange-belt orange-belt"
+    "belt-display yellow-belt yellow-belt"
+    "belt-display white-belt white-belt"
+    "belt-display . .";
+}
+
+.belt-display {
+  grid-area: belt-display;
+  /* background-image: url(../img/beltdisplay.png);
+  background-size: contain;
+  background-repeat: no-repeat; */
+}
+
+.beltdisplay-pic {
+  height: 600px;
+  display: block;
+  margin: auto;
+}
+
+
+.black-belt {
+  grid-area: black-belt;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.brown-belt {
+  grid-area: brown-belt;
+  background-color: rgba(147, 73, 21, 0.2);
+}
+
+.blue-belt {
+  grid-area: blue-belt;
+  background-color: rgba(0, 94, 171, 0.2);
+}
+
+.green-belt {
+  grid-area: green-belt;
+  background-color: rgba(0, 177, 46, 0.2);
+}
+
+.orange-belt {
+  grid-area: orange-belt;
+  background-color: rgba(255, 149, 0, 0.2);
+}
+
+.yellow-belt {
+  grid-area: yellow-belt;
+  background-color: rgba(255, 241, 0, 0.2);
+}
+
+.white-belt {
+  grid-area: white-belt;
+  background-color: rgba(168, 168, 168, 0.2);
+}
+
+
+
+
+
+
+
+
+
 /* -------------- media query tablet --------------- */
 @media screen and (max-width: 950px) and (min-width: 672px) {}
 
 
 /* ------- media query (ipad pro +) laptop --------- */
 @media screen and (min-width: 950px) {
+
+  h1 {
+    font-size: 4.5em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+
+  /* ===================================== NAVIGATION ===================================== */
+
+  .navbar {
+    padding: 0 7em;
+  }
+
   .nav-menu {
     display: flex;
     justify-content: center;
@@ -216,104 +380,111 @@ button {
 
   /*------------------- Drop down ---------------------*/
 
-.dropbtn-link {
-  padding: 25.5px 5px;
-}
+  .dropbtn-link {
+    padding: 25.5px 5px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    top: 28px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    left: -50%;
+    background-color: var(--bg);
+    min-width: 180px;
+    min-height: 220px;
+  }
+
+  .drop-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .dropdown-content h3 {
+    display: block;
+    padding: 12px 16px;
+    text-align: left;
+  }
 
 
+  .dropbtn:hover .dropdown .drop-container .dropdown-content {
+    display: block;
+  }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  top: 28px;
-}
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
 
-.dropdown-content {
-  display: none;
-  position: relative;
-  left: -50%;
-  background-color: var(--bg);
-  min-width: 180px;
-  min-height: 220px;
-}
+  /* ===================================== Landing page ===================================== */
 
-.drop-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-}
-
-.dropdown-content a {
+.landing-video-desktop {
   display: block;
-  padding: 12px 16px;
-  text-align: left;
-}
-
-.dropdown-content h3 {
-  display: block;
-  padding: 12px 16px;
-  text-align: left;
-}
-
-
-.dropbtn:hover .dropdown .drop-container .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-
-}
-
-
-/* ===================================== Landing page ===================================== */
-
-.redbox {
-  width: 83%;
-  margin-top: -6em;
-  position: relative;
-  z-index: 10;
-}
-
-.headline {
-  margin: -7.25em 1.5em 5em 1.25em;
-  position: relative;
-  z-index: 11;
-  color: var(--bg);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.hold-billeder {
-  margin: 1.5em 0;
-}
-
-.billeder {
-  margin: 1.5em 0;
   width: 100%;
-}
+ }
 
-/* ===================================== 404 ===================================== */
+ .landing-video-mobile {
+   display: none;
+ }
+ 
+ .redbox {
+   width: 80%;
+   margin-top: -21.6em;
+   height: 520px;
+ }
+ 
+ .headline {
+   margin: -18em 1.5em 10em 7em;
+   width: 30em;
+ }
+
+ .subliner {
+   display: none;
+ }
+
+ .subliner-desktop {
+   display: block;
+   text-align: left;
+   margin: 1em 0;
+ }
+
+ .hold {
+   display: flex;
+   justify-content: space-around;
+ }
+ 
+ .hold-billeder {
+   margin: 1.5em 0;
+ }
+ 
+ .billeder {
+   margin: 0em 0;
+   width: 100%;
+ }
+ 
+ .holdnavn {
+   text-align: center;
+   margin: -3.3em 0 2em 0;
+   color: var(--bg);
+   font-size: 1.5em;
+ }
+
+
+ /* ===================================== 404 ===================================== */
 
 .billede-404 {
-  display: block;
-  height: 400px;
-  margin: auto;
-  padding: 2em;
+  width: 30%;
 }
 
-.h1-404 {
-  text-align: center;
-}
 
-.h2-404 {
-  text-align: center;
-}
-
-.link {
-  color: var(--red);
-  text-decoration: underline;
 }

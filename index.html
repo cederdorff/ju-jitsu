@@ -79,26 +79,42 @@
     <main>
 
         <section id="home" class="page">
-            <video src="img/killian_leger.mp4" autoplay muted loop></video>
+            <video class="landing-video-mobile" src="img/landing-video-mobile.mp4" autoplay muted loop></video>
+            <video class="landing-video-desktop" src="img/landing-desk.mp4" autoplay muted loop></video>
             <img class="redbox" src="img/redbox.png" alt="red box">
 
             <article class="headline">
                 <h2>HØST IF</h2>
                 <h1>Ju Jitsu</h1>
                 <p class="subliner">Selvforsvar gennem <br> sjov og varieret træning</p>
+                <p class="subliner-desktop">Velkommen til HØST IF Ju Jitsu, hvor du kan lære at beskytte dig selv
+                    igennem faldteknik, frigørelsesteknikker og kontrolteknikker, fra oprejst, siddende og liggende
+                    position, i bevægelse, imod angribere der er større og stærkere end dig selv.</p>
             </article>
 
             <article>
                 <h1 class="h1-black">Vores hold</h1>
-                <a href="#/404"><img class="hold-billeder" src="img/ungdomshold.png" alt="ju jitsu"></a>
-                <a href="#/404"><img class="hold-billeder" src="img/ungdomshold.png" alt="ju jitsu"></a>
-                <a href="#/404"><img class="hold-billeder" src="img/ungdomshold.png" alt="ju jitsu"></a>
+                <div class="hold">
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/barnshold.png" alt="ju jitsu"></a>
+                        <h2 class="holdnavn">Børnehold <br> 6-13 år</h2>
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/ungdomshold.png" alt="ju jitsu"></a>
+                        <h2 class="holdnavn">Ungdomshold <br> 14-15 år</h2>
+                    </div>
+                    <div>
+                        <a href="#/404"><img class="hold-billeder" src="img/voksenhold.png" alt="ju jitsu"></a>
+                        <h2 class="holdnavn">Voksenhold <br> 16+ år</h2>
+                    </div>
+                </div>
             </article>
 
             <article>
                 <h1 class="h1-black">Få en god start</h1>
                 <img class="billeder" src="img/goStart.jpg" alt="ju jitsu undervisning">
-                <p>Udfordre dig selv og prøv noget der vil gøre en positiv forskel! Du behøver ingen forkundskaber, blot et par træningsbukser og en t-shirt. Vi gør det nemt for dig.
+                <p>Udfordre dig selv og prøv noget der vil gøre en positiv forskel! Du behøver ingen forkundskaber, blot
+                    et par træningsbukser og en t-shirt. Vi gør det nemt for dig.
                 </p>
                 <button type="button" onclick="navigateTo('#/404')">Se mere</button>
             </article>
@@ -106,7 +122,8 @@
             <article>
                 <h1 class="h1-black">Om klubben</h1>
                 <img class="billeder" src="img/belt.jpg" alt="ju jitsu undervisning">
-                <p>Vi har siden 2010 trænet store som små efter den norske model. Gradueringspensumet udviklet af Ju Jitsu Norge er efter vores bedste overbevisning den mest dækkende form for Ju Jitsu.
+                <p>Vi har siden 2010 trænet store som små efter den norske model. Gradueringspensumet udviklet af Ju
+                    Jitsu Norge er efter vores bedste overbevisning den mest dækkende form for Ju Jitsu.
                 </p>
                 <button type="button" onclick="navigateTo('#/404')">Se mere</button>
             </article>
@@ -114,7 +131,8 @@
             <article>
                 <h1 class="h1-black">Prøvetræning</h1>
                 <img class="billeder" src="img/tryout.jpg" alt="ju jitsu undervisning">
-                <p>Har du lyst til at prøve kræfter med Ju Jitsu? <br> Vi tilbyder selvfølgelig en udforpligtende og gratis prøvetræning.
+                <p>Har du lyst til at prøve kræfter med Ju Jitsu? <br> Vi tilbyder selvfølgelig en udforpligtende og
+                    gratis prøvetræning.
                 </p>
                 <button type="button" onclick="navigateTo('#/404')">Se mere</button>
             </article>
@@ -134,13 +152,30 @@
         <section id="medlemmer" class="page">
             <h1>medlemmer siden</h1>
             <div id="check"></div>
+
+            <article class="belt-liga">
+                <div class="belt-grid">
+                    <div class="belt-display">
+                        <img class="beltdisplay-pic" src="img/beltdisplay.png" alt="ju jitsu bælteskala">
+                    </div>
+                    <div class="black-belt"></div>
+                    <div class="brown-belt"></div>
+                    <div class="blue-belt"></div>
+                    <div class="green-belt"></div>
+                    <div class="orange-belt"></div>
+                    <div class="yellow-belt"></div>
+                    <div class="white-belt"></div>
+                </div>
+            </article>
+
         </section>
 
         <section id="page-404" class="page">
             <h1 class="h1-404">Fejl - 404</h1>
             <h2 class="h2-404">Denne side er endnu ikke oprettet</h2>
             <img src="img/404.png" alt="meditation" class="billede-404">
-                <h2 class="h2-404">Tag en dyb indånding og <a class="link" href="javascript:history.back()">hop et skridt tilbage</a></h2>
+            <h2 class="h2-404">Tag en dyb indånding og <a class="link" href="javascript:history.back()">hop et skridt
+                    tilbage</a></h2>
         </section>
 
 

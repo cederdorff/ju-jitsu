@@ -2,11 +2,15 @@ import { navigateTo } from "./router.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
 import {
 	getAuth,
-	signInWithEmailAndPassword,
 	onAuthStateChanged,
-	signOut,
-	createUserWithEmailAndPassword
+	signOut
 } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-auth.js";
+
+import {
+    getFirestore,
+    collection
+} from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
+
 
 // ========== FIREBASE SIGN IN FUNCTIONALITY ========== //
 // Your web app's Firebase configuration
@@ -35,26 +39,29 @@ onAuthStateChanged(_auth, user => {
 		userAuthenticated(user);
 	} else {
 		// User is signed out
+		userNotAuthenticated();
 		if (location.hash === "#/medlemmer" || location.hash === "#/login") {
-			userNotAuthenticated();
+			navigateTo("#/login");
 		}
 	}
 });
 
 function userAuthenticated(user) {
 	appendUserData(user);
+	navigateTo("#/medlemmer");
+}
+
+function appendUserData(user) {
+	console.log(user);
 }
 
 function userNotAuthenticated() {
-	navigateTo("#/login");
 
 	// Firebase UI configuration
 	const uiConfig = {
 		credentialHelper: firebaseui.auth.CredentialHelper.NONE,
 		signInOptions: [
-			firebase.auth.EmailAuthProvider.PROVIDER_ID,
-			firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-			firebase.auth.FacebookAuthProvider.PROVIDER_ID
+			firebase.auth.EmailAuthProvider.PROVIDER_ID
 		],
 		signInSuccessUrl: "#/medlemmer"
 	};
@@ -63,51 +70,24 @@ function userNotAuthenticated() {
 		_firebaseUI = new firebaseui.auth.AuthUI(firebase.auth());
 	}
 	_firebaseUI.start("#firebaseui-auth-container", uiConfig);
-	// showLoader(false);
-}
-// ----------------------------------- login bage - det LM prøver på slut --------------------------------- //
-
-function login() {
-	const mail = document.querySelector("#login-mail").value;
-	const password = document.querySelector("#login-password").value;
-
-	signInWithEmailAndPassword(_auth, mail, password)
-		.then(userCredential => {
-			// Signed in
-			const user = userCredential.user;
-			console.log(user);
-			document.querySelector(".login-message").innerHTML = "";
-		})
-		.catch(error => {
-			console.log(error);
-			document.querySelector(".login-message").innerHTML = error.message;
-		});
+	//showLoader(false);
 }
 
 function logout() {
 	signOut(_auth);
 }
 
-function signup() {
-	const mail = document.querySelector("#signup-mail").value;
-	const password = document.querySelector("#signup-password").value;
-	createUserWithEmailAndPassword(_auth, mail, password)
-		.then(userCredential => {
-			// Signed in
-			const user = userCredential.user;
-			console.log();
-		})
-		.catch(error => {
-			console.log(error);
-			document.querySelector(".signup-message").innerHTML = error.message;
-		});
-}
+// ========== Reading from collection (modular v9) ========== //
+
+// reference to darabase
+const _db = getFirestore();
+// reference to users collection in database
+const _usersRef = collection(_db, "users");
+let _users = [];
 
 
 // =========== attach events =========== //
-// document.querySelector("#btn-login").onclick = () => login();
-// document.querySelector("#btn-logout").onclick = () => logout();
-// document.querySelector("#btn-signup").onclick = () => signup();
+document.querySelector("#btn-logout").onclick = () => logout();
 window.navigateTo = path => navigateTo(path);
 
 // =================================================== Navigation =====================================================

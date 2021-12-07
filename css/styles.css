@@ -331,6 +331,63 @@ button {
 
 
 
+/* ===================================== footer ===================================== */
+
+.footer_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-top: 0.1em solid var(--red);
+}
+
+.article_footer{
+  margin: 2em 1.5em;
+}
+
+.partner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.partner_img_JJN{
+  width: 6em;
+  padding-top: 0.5em;
+}
+
+.partner_img_IF{
+  width: 3.5em;
+}
+
+.p_footer{
+  font-weight: 600;
+}
+
+.footer_some{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fb_img{
+  width: 3em;
+  padding-bottom: 0.5em;
+}
+
+.p_mail{
+  color: var(--red);
+  text-decoration: underline;
+  padding-top: 1em;
+}
+
 
 
 /* -------------- media query tablet --------------- */
@@ -482,9 +539,31 @@ button {
 
  /* ===================================== 404 ===================================== */
 
-.billede-404 {
-  width: 30%;
-}
+  .billede-404 {
+    width: 30%;
+  }
+
+  /*===== footer =====*/ 
+  .footer_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+        flex-direction: row;
+    -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+        justify-content: space-between;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+    padding: 0 10%;
+  }
+
+  .footer_some{
+    flex-direction: row;
+  }
 
 
 }

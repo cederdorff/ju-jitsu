@@ -96,3 +96,4 @@ function showTabbar(show) {
 		tabbar.classList.add("hide");
 	}
 }
+

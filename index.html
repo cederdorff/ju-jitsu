@@ -142,15 +142,19 @@
 
         <section id="login" class="page">
             <h1>Log in</h1>
-                <p></p>
-                <!--  -->
+                <p>Det er først muligt at logge ind og se flere informationer når man er tilmeldt et hold</p>
             <div id="firebaseui-auth-container"></div>
         </section>
 
         <section id="medlemmer" class="page">
-            <h1>medlemmer siden</h1>
+            <h1>Hej</h1>
             <button id="btn-logout">logud</button>
             <div id="check"></div>
+            <article class="members_welcome_message">
+                <p>Dette er en side kun for medlemmere, her kan du se hvor langt du er i bælte ligaen, og se hvor langt du har til sort bælte.<br><br>
+                    Du kan også se alle nyhederne her, som også er på vores facebook.<br><br>
+                    Pensummet finder du også her på siden, så du kan se hvad du skal kunne til det næste bælte og meget mere.</p>
+            </article>
 
             <article class="belt-liga">
                 <div class="belt-grid">
@@ -165,6 +169,70 @@
                     <div class="yellow-belt"></div>
                     <div class="white-belt"></div>
                 </div>
+            </article>
+
+            <article class="members_news">
+                <h2>Nyheder</h2>
+                <p>Se alle nyhederne på vores facebook.<br><br>Vi sender også beskeder ud på SMS til det registrerede tlf. der blev oplsyt ved tilmelding, med besked om eks. aflyste træninger eller lignende.</p>
+            </article>
+
+            <article class="members_pensum">
+                <h2>Pensum</h2>
+                <p>Klik på det belte du vil vide pensum for, for at hente det.</p>
+                <section class="members_pensum_btn">
+                    <button type="button" onclick="btn_adult()">Voksne</button>
+                    <button type="button" onclick="btn_children()">Børn</button>
+                </section>
+                <section class="members_pensum_belts">
+                    <div id="adult_pensum">
+                        <p>Voksen pensum</p> 
+                            <div class="belt_adult">
+                                <img class="belt" src="img/white.png" alt="Ju Jitsu hvidt bælte">
+                                <img class="belt" src="img/yellow.png" alt="Ju Jitsu gult bælte">
+                                <img class="belt" src="img/orange.png" alt="Ju Jitsu orange bælte">
+                                <img class="belt" src="img/green.png" alt="Ju Jitsu grønt bælte">
+                                <img class="belt" src="img/blue.png" alt="Ju Jitsu blåt bælte">
+                                <img class="belt" src="img/brown.png" alt="Ju Jitsu brunt bælte">
+                                <img class="belt" src="img/black.png" alt="Ju Jitsu sort bælte">
+                            </div>
+                    </div>
+                    <div id="children_pensum">
+                        <p>Børn</p>
+                        <div class="belt_children">
+                            <img class="belt" src="img/white.png" alt="Ju Jitsu junior hvidt bælte">
+                            <img class="belt" src="img/white-junior-1-line.png" alt="Ju Jitsu junior hvid 1 streg bælte">
+                            <img class="belt" src="img/white -junior-2-line.png" alt="Ju Jitsu  junior hvidt 1 streger bælte">
+                            <img class="belt" src="img/yellow-junior.png" alt="Ju Jitsu junior gult bælte">
+                            <img class="belt" src="img/yellow-junior-1-line.png" alt="Ju Jitsu junior gult 1 streg bælte">
+                            <img class="belt" src="img/yellow-junior-2-line.png" alt="Ju Jitsu junior gult 2 streger bælte">
+                            <img class="belt" src="img/orange-juniorpng.png" alt="Ju Jitsu junior orange bælte">
+                            <img class="belt" src="img/orange-junior-1-line.png" alt="Ju Jitsu junior orange 1 streg bælte">
+                            <img class="belt" src="img/orange-junior-2-line.png" alt="Ju Jitsu junior orange 2 streger bælte">
+                            <img class="belt" src="img/green-junior.png" alt="Ju Jitsu junior grønt bælte">
+                            <img class="belt" src="img/green-junior-1-line.png" alt="Ju Jitsu junior grønt 1 streg bælte">
+                            <img class="belt" src="img/green-junior-2-line.png" alt="Ju Jitsu junior grønt 2 streger bælte">
+                            <div class="belt_childrent_hide">
+                                <img class="belt" src="img/blue-junior.png" alt="Ju Jitsu junior blåt bælte">
+                                <img class="belt" src="img/blue-junior-1-line.png" alt="Ju Jitsu junior blåt 1 streg bælte">
+                                <img class="belt" src="img/blue-junior-2-line.png" alt="Ju Jitsu junior blåt 2 streger bælte">
+                                <img class="belt" src="img/brown-junior.png" alt="Ju Jitsu junior brunt bælte">
+                                <img class="belt" src="img/brown-junior-1-line.png" alt="Ju Jitsu junior brunt 1 streg bælte">
+                                <img class="belt" src="img/brown-junior-2-line.png" alt="Ju Jitsu junior brunt 2 streger bælte">
+                                <img class="belt" src="img/brown-2-junior.png" alt="Ju Jitsu junior 2 brunt bælte">
+                                <img class="belt" src="img/brown-2-junior-1-line.png" alt="Ju Jitsu junior 2 brunt 1 streg bælte">
+                                <img class="belt" src="img/brown-2-junior-2-line.png" alt="Ju Jitsu junior 2 brunt 2 streger bælte">
+                                <img class="belt" src="img/black-junior.png" alt="Ju Jitsu junior sort bælte">
+                                <img class="belt" src="img/black-2-junior.png" alt="Ju Jitsu junior 2 sort bælte">
+                            </div>
+                            <button type="button" onclick="btn_belt_children()">... Se flere</button>
+                            
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <article class="members_tie_belt">
+ 
             </article>
 
         </section>

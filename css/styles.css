@@ -276,12 +276,12 @@ button {
     "belt-display . .";
 }
 
-.belt-display {
+ .belt-display {
   grid-area: belt-display;
   /* background-image: url(../img/beltdisplay.png);
   background-size: contain;
   background-repeat: no-repeat; */
-}
+} 
 
 .beltdisplay-pic {
   height: 600px;
@@ -323,10 +323,35 @@ button {
 .white-belt {
   grid-area: white-belt;
   background-color: rgba(168, 168, 168, 0.2);
+} 
+
+/* ===== Pensum - "for melemmer siden ===== */
+.members_pensum_btn {
+  display: flex;
+  flex-direction: row;
 }
 
+#adult_pensum, #children_pensum {
+	display: block; /*none*/
+}
 
+#adult_pensum {
+	display: block;
+}
 
+.belt{
+  width: 100px;
+  height: 100px;
+}
+
+.belt_adult{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.belt_childrent_hide{
+  display: none;
+}
 
 
 

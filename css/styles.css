@@ -227,29 +227,6 @@ button {
   color: var(--bg);
 }
 
-/* ===================================== 404 ===================================== */
-
-.billede-404 {
-  display: block;
-  width: 60%;
-  /* height: 400px; // til desktop */
-  margin: auto;
-  padding: 2em;
-}
-
-.h1-404 {
-  text-align: center;
-}
-
-.h2-404 {
-  text-align: center;
-}
-
-.link {
-  color: var(--red);
-  text-decoration: underline;
-}
-
 /* ===================================== Medlems siden ===================================== */
 
 .belt-liga {
@@ -344,16 +321,15 @@ button {
   height: 100px;
 }
 
-.belt_adult{
+.belt_adult, .belt_children, .belt_childrent_hide{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .belt_childrent_hide{
   display: none;
 }
-
-
 
 
 /* ===================================== footer ===================================== */
@@ -413,6 +389,28 @@ button {
   padding-top: 1em;
 }
 
+/* ===================================== 404 ===================================== */
+
+.billede-404 {
+  display: block;
+  width: 60%;
+  /* height: 400px; // til desktop */
+  margin: auto;
+  padding: 2em;
+}
+
+.h1-404 {
+  text-align: center;
+}
+
+.h2-404 {
+  text-align: center;
+}
+
+.link {
+  color: var(--red);
+  text-decoration: underline;
+}
 
 
 /* -------------- media query tablet --------------- */

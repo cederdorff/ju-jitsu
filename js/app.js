@@ -97,15 +97,16 @@ const navMenu = document.querySelector(".nav-menu");
 
 //add en event lisenter til hamburger
 hamburger.addEventListener("click", () => {
-	//activer classen der ændre mine bar til et X og den class der viser menuen
+	//activer classen der ændre min bar til et X og den class der viser menuen
 	hamburger.classList.toggle("active");
 	navMenu.classList.toggle("active");
+	
 });
 
 //Søger for at nav lukker sig og bliver "normal" når man klikker på et link.
 document.querySelectorAll(".nav-link").forEach(n =>
-	n //add en eventlistener
-		.addEventListener("click", () => {
+	 //add en eventlistener
+		n.addEventListener("click", () => {
 			//click event, der vil fjerne active class
 			hamburger.classList.remove("active");
 			navMenu.classList.remove("active");
@@ -113,7 +114,10 @@ document.querySelectorAll(".nav-link").forEach(n =>
 );
 
 
-// ===========  hide og show knap til pensum på "for medlemmer" ===========  //
+
+
+
+// ==========================================  hide og show knap til pensum på "for medlemmer" ====================================== 
 function btn_adult() {
 	var x = document.getElementById("adult_pensum");
 		if (x.style.display === "block") {
@@ -133,6 +137,8 @@ function btn_children() {
 	  		document.getElementById("adult_pensum").style.display = "none";
 		}
 }
+
+
 // =  hide og show knap til pensum børne pensum på "for medlemmer" =  //
 // function btn_belt_children.click(() =>{
 // 	$(".belt_childrent_hide").toggleClass("open");

@@ -24,46 +24,23 @@
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#/" class="nav-link">Forside</a>
+                    <a href="#/" class="nav-link current">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#/" class="nav-link">En god start</a>
+                    <a href="#/404" class="nav-link">En god start</a>
                 </li>
-                <li class="nav-item dropbtn">
-                    <a href="#/" class="dropbtn-link">Ju Jitsu <i class="arrowdown"></i></a>
-
-                    <ul class="dropdown">
-                        <div class="drop-container">
-                            <li class="dropdown-content">
-                                <h3 href="#" class="nav-link">Om os</h3>
-                                <hr>
-                                <a href="#/404" class="nav-link">Om klubben</a>
-                                <a href="#/404" class="nav-link">Mød trænerne</a>
-                                <a href="#/404" class="nav-link">Kontakt</a>
-                            </li>
-
-                            <li class="dropdown-content">
-                                <h3 href="#" class="nav-link">Praktisk info</h3>
-                                <hr>
-                                <a href="#" class="nav-link">Prøvetræning</a>
-                                <a href="#" class="nav-link">Priser</a>
-                                <a href="#" class="nav-link">Udstyr</a>
-                                <a href="#" class="nav-link">Ordensregler</a>
-                            </li>
-                        </div>
-                    </ul>
-                </li>
-
                 <li class="nav-item">
-                    <a href="#/404" class="nav-link">Hold</a>
+                    <a href="#/404" class="nav-link">Praktisk info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#/404" class="nav-link">Om os</a>
                 </li>
                 <li class="nav-item">
                     <a href="#/medlemmer" class="nav-link">For medlemmer</a>
                 </li>
-
             </ul>
 
-            <button class="lil-button">Tilmeld</button>
+            <button id="tilmeld-knap" class="lil-button">Tilmeld</button>
 
 
             <div class="hamburger">
@@ -124,7 +101,8 @@
                 <img class="billeder" src="img/belt.jpg" alt="ju jitsu undervisning">
                 <p>Hos os går vi ikke så meget op i stævner, men meget mere op i kampsporten selv. <br>
                     Vi har siden 2010 trænet store som små efter den norske model. <br>
-                    Gradueringspensumet udviklet af Ju Jitsu Norge er efter vores bedste overbevisning den mest dækkende form for Ju Jitsu.
+                    Gradueringspensumet udviklet af Ju Jitsu Norge er efter vores bedste overbevisning den mest dækkende
+                    form for Ju Jitsu.
                 </p>
                 <button type="button" onclick="navigateTo('#/404')">Se mere</button>
             </article>
@@ -142,7 +120,7 @@
 
         <section id="login" class="page">
             <h1>Log in</h1>
-                <p>Det er først muligt at logge ind og se flere informationer når man er tilmeldt et hold</p>
+            <p>Det er først muligt at logge ind og se flere informationer når man er tilmeldt et hold</p>
             <div id="firebaseui-auth-container"></div>
         </section>
 
@@ -150,9 +128,11 @@
             <h1>Hej</h1>
             <div id="check"></div>
             <article class="members_welcome_message">
-                <p>Dette er en side kun for medlemmere, her kan du se hvor langt du er i bælte ligaen, og se hvor langt du har til sort bælte.<br><br>
+                <p>Dette er en side kun for medlemmere, her kan du se hvor langt du er i bælte ligaen, og se hvor langt
+                    du har til sort bælte.<br><br>
                     Du kan også se alle nyhederne her, som også er på vores facebook.<br><br>
-                    Pensummet finder du også her på siden, så du kan se hvad du skal kunne til det næste bælte og meget mere.</p>
+                    Pensummet finder du også her på siden, så du kan se hvad du skal kunne til det næste bælte og meget
+                    mere.</p>
             </article>
 
             <article class="belt-liga">
@@ -172,7 +152,8 @@
 
             <article class="members_news">
                 <h2>Nyheder</h2>
-                <p>Se alle nyhederne på vores facebook.<br><br>Vi sender også beskeder ud på SMS til det registrerede tlf. der blev oplsyt ved tilmelding, med besked om eks. aflyste træninger eller lignende.</p>
+                <p>Se alle nyhederne på vores facebook.<br><br>Vi sender også beskeder ud på SMS til det registrerede
+                    tlf. der blev oplsyt ved tilmelding, med besked om eks. aflyste træninger eller lignende.</p>
             </article>
 
             <article class="members_pensum">
@@ -184,52 +165,82 @@
                 </section>
                 <section class="members_pensum_belts">
                     <div id="adult_pensum">
-                            <div class="belt_adult">
-                                <a href="img/BASISTEKNIKKER-JJN-Ju-jitsu.pdf" download><img class="belt" src="img/white.png" alt="Ju Jitsu hvidt bælte"></a>
-                                <a href="img/5-kyu-GULT-BELTE.pdf" download><img class="belt" src="img/yellow.png" alt="Ju Jitsu gult bælte"></a>
-                                <a href="img/4-kyu-orange-belte.pdf" download><img class="belt" src="img/orange.png" alt="Ju Jitsu orange bælte"></a>
-                                <a href="img/3-kyu-grønt-belte.pdf" download><img class="belt" src="img/green.png" alt="Ju Jitsu grønt bælte"></a>
-                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/blue.png" alt="Ju Jitsu blåt bælte"></a>
-                                <a href="img/1-kyu-Brunt-belte.pdf" download><img class="belt" src="img/brown.png" alt="Ju Jitsu brunt bælte"></a>
-                                <img class="belt" src="img/black.png" alt="Ju Jitsu sort bælte">
-                            </div>
+                        <div class="belt_adult">
+                            <a href="img/BASISTEKNIKKER-JJN-Ju-jitsu.pdf" download><img class="belt" src="img/white.png"
+                                    alt="Ju Jitsu hvidt bælte"></a>
+                            <a href="img/5-kyu-GULT-BELTE.pdf" download><img class="belt" src="img/yellow.png"
+                                    alt="Ju Jitsu gult bælte"></a>
+                            <a href="img/4-kyu-orange-belte.pdf" download><img class="belt" src="img/orange.png"
+                                    alt="Ju Jitsu orange bælte"></a>
+                            <a href="img/3-kyu-grønt-belte.pdf" download><img class="belt" src="img/green.png"
+                                    alt="Ju Jitsu grønt bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/blue.png"
+                                    alt="Ju Jitsu blåt bælte"></a>
+                            <a href="img/1-kyu-Brunt-belte.pdf" download><img class="belt" src="img/brown.png"
+                                    alt="Ju Jitsu brunt bælte"></a>
+                            <img class="belt" src="img/black.png" alt="Ju Jitsu sort bælte">
+                        </div>
                     </div>
                     <div id="children_pensum">
                         <div class="belt_children">
-                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white.png" alt="Ju Jitsu junior hvidt bælte"></a>
-                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white-junior-1-line.png" alt="Ju Jitsu junior hvid 1 streg bælte"></a>
-                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white -junior-2-line.png" alt="Ju Jitsu  junior hvidt 1 streger bælte"></a>
-                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/yellow-junior.png" alt="Ju Jitsu junior gult bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/yellow-junior-1-line.png" alt="Ju Jitsu junior gult 1 streg bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/yellow-junior-2-line.png" alt="Ju Jitsu junior gult 2 streger bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/orange-juniorpng.png" alt="Ju Jitsu junior orange bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/orange-junior-1-line.png" alt="Ju Jitsu junior orange 1 streg bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/orange-junior-2-line.png" alt="Ju Jitsu junior orange 2 streger bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/green-junior.png" alt="Ju Jitsu junior grønt bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/green-junior-1-line.png" alt="Ju Jitsu junior grønt 1 streg bælte"></a>
-                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/green-junior-2-line.png" alt="Ju Jitsu junior grønt 2 streger bælte"></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white.png"
+                                    alt="Ju Jitsu junior hvidt bælte"></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/white-junior-1-line.png"
+                                    alt="Ju Jitsu junior hvid 1 streg bælte"></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt"
+                                    src="img/white -junior-2-line.png" alt="Ju Jitsu  junior hvidt 1 streger bælte"></a>
+                            <a href="img/1_WBP_Ålesund.pdf" download><img class="belt" src="img/yellow-junior.png"
+                                    alt="Ju Jitsu junior gult bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/yellow-junior-1-line.png" alt="Ju Jitsu junior gult 1 streg bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/yellow-junior-2-line.png" alt="Ju Jitsu junior gult 2 streger bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-juniorpng.png" alt="Ju Jitsu junior orange bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-junior-1-line.png" alt="Ju Jitsu junior orange 1 streg bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/orange-junior-2-line.png" alt="Ju Jitsu junior orange 2 streger bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/green-junior.png"
+                                    alt="Ju Jitsu junior grønt bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/green-junior-1-line.png" alt="Ju Jitsu junior grønt 1 streg bælte"></a>
+                            <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                    src="img/green-junior-2-line.png" alt="Ju Jitsu junior grønt 2 streger bælte"></a>
                             <div class="belt_childrent_hide">
-                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt" src="img/blue-junior.png" alt="Ju Jitsu junior blåt bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/blue-junior-1-line.png" alt="Ju Jitsu junior blåt 1 streg bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/blue-junior-2-line.png" alt="Ju Jitsu junior blåt 2 streger bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-junior.png" alt="Ju Jitsu junior brunt bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-junior-1-line.png" alt="Ju Jitsu junior brunt 1 streg bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-junior-2-line.png" alt="Ju Jitsu junior brunt 2 streger bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-2-junior.png" alt="Ju Jitsu junior 2 brunt bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-2-junior-1-line.png" alt="Ju Jitsu junior 2 brunt 1 streg bælte"></a>
-                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt" src="img/brown-2-junior-2-line.png" alt="Ju Jitsu junior 2 brunt 2 streger bælte"></a>
+                                <a href="img/2_GREEN-BELT-Program.pdf" download><img class="belt"
+                                        src="img/blue-junior.png" alt="Ju Jitsu junior blåt bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/blue-junior-1-line.png" alt="Ju Jitsu junior blåt 1 streg bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/blue-junior-2-line.png" alt="Ju Jitsu junior blåt 2 streger bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior.png" alt="Ju Jitsu junior brunt bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior-1-line.png" alt="Ju Jitsu junior brunt 1 streg bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-junior-2-line.png"
+                                        alt="Ju Jitsu junior brunt 2 streger bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior.png" alt="Ju Jitsu junior 2 brunt bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior-1-line.png"
+                                        alt="Ju Jitsu junior 2 brunt 1 streg bælte"></a>
+                                <a href="img/3_BLACK-BELT-Program1-2-2.pdf" download><img class="belt"
+                                        src="img/brown-2-junior-2-line.png"
+                                        alt="Ju Jitsu junior 2 brunt 2 streger bælte"></a>
                                 <img class="belt" src="img/black-junior.png" alt="Ju Jitsu junior sort bælte">
                                 <img class="belt" src="img/black-2-junior.png" alt="Ju Jitsu junior 2 sort bælte">
                             </div>
                             <button type="button" onclick="btn_belt_children()">... Se flere</button>
-                            
+
                         </div>
                     </div>
                 </section>
             </article>
 
             <article class="members_tie_belt">
-                <video class="members_video_tie_belt" src="img/tie_belt.MOV"muted></video>
+                <video class="members_video_tie_belt" src="img/tie_belt.MOV" muted></video>
             </article>
             <button id="btn-logout">logud</button>
         </section>
@@ -248,8 +259,8 @@
     <footer>
         <section class="footer_section">
             <article class="partner article_footer">
-              <p class="p_footer">Samarbejdspartner</p>
-              <img href="#" src="img/JJN-logo.png" alt="HØST IF logo" class="partner_img_JJN">
+                <p class="p_footer">Samarbejdspartner</p>
+                <img href="#" src="img/JJN-logo.png" alt="HØST IF logo" class="partner_img_JJN">
                 <img href="#" src="img/IF-logo.png" alt="HØST IF logo" class="partner_img_IF">
             </article>
             <article class="footer_some article_footer">
@@ -260,7 +271,7 @@
                 <p class="p_footer">Mejsevej 1, Hadbjerg,<br>8370 Hadsten<br>HØST-hallen</p>
                 <p class="p_footer p_mail">Hadbjerg.jujitsu@gmail.com</p>
             </article>
-          </section>
+        </section>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>

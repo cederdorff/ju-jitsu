@@ -117,9 +117,9 @@ document.querySelectorAll(".nav-link").forEach(n =>
 
 
 
-// ==========================================  hide og show knap til pensum på "for medlemmer" ====================================== 
+// ===========  hide og show knap til pensum på "for medlemmer" ===========  //
 function btn_adult() {
-	var x = document.getElementById("adult_pensum");
+	const x = document.getElementById("adult_pensum");
 		if (x.style.display === "block") {
 	 		x.style.display = "none";
 		} else {
@@ -129,7 +129,7 @@ function btn_adult() {
 }
 
 function btn_children() {
-	var x = document.getElementById("children_pensum");
+	const x = document.getElementById("children_pensum");
 		if (x.style.display === "block") {
 	  		x.style.display = "none";
 		} else {
@@ -138,15 +138,19 @@ function btn_children() {
 		}
 }
 
+document.querySelector("#btn-adult").onclick = () => btn_adult();
+document.querySelector("#btn-children").onclick = () => btn_children();
 
 // =  hide og show knap til pensum børne pensum på "for medlemmer" =  //
-// function btn_belt_children.click(() =>{
-// 	$(".belt_childrent_hide").toggleClass("open");
-// 	if (!$(".belt_childrent_hide").hasClass("open")) {
-// 		$(".btn_belt_children").text("... Se flere");
-// 	} else {
-// 		$(".btn_belt_children").text("... Se mindre");
-// 	}
-// });
+function btn_belt_children() {
+	$("#belt_childrent_hide").toggleClass("open");
+	if (!$("#belt_childrent_hide").hasClass("open")) {
+		$(".btn_belt_children").text("... Se flere");
+	} else {
+		$(".btn_belt_children").text("... Se mindre");
+	}
+};
+
+document.querySelector("#belt_childrent_hide").onclick = () => btn_belt_children();
 
 

@@ -65,6 +65,23 @@ h2 {
   font-family: co-headline, sans-serif;
   font-style: normal;
   font-size: 1.2em;
+  text-align: center;
+}
+
+p{
+  font-size: 1em ;
+}
+
+.p_center{
+  text-align: center;
+}
+
+.p_mellemrum{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 video {
@@ -303,7 +320,7 @@ button {
 }
 
 #adult_pensum, #children_pensum {
-	display: block; /*none*/
+	display: none;
 }
 
 #adult_pensum {
@@ -315,14 +332,24 @@ button {
   height: 100px;
 }
 
-.belt_adult, .belt_children, .belt_childrent_hide{
+.belt_adult, .belt_children, #belt_childrent_hide{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.belt_childrent_hide{
+#belt_childrent_hide{
   display: none;
+}
+
+.btn_download_pensum{
+  position: absolute;
+  height: 25px;
+  width: 96px;
+  opacity: 70%;
+  margin-top: -46px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 
@@ -408,7 +435,29 @@ button {
 
 
 /* -------------- media query tablet --------------- */
-@media screen and (max-width: 950px) and (min-width: 672px) {}
+@media screen and (max-width: 950px) and (min-width: 672px) {
+
+  .page{
+    padding: 7em 10em;
+  }
+
+  /* ===================================== for medlemmer ===================================== */
+
+  /* -- Pensum -- */
+  .members_pensum_belts{
+    padding: 1em 0em;
+  }
+
+  .belt{
+    padding: 0.7em;
+    width: 110px;
+    height: 110px;
+  }
+
+  .btn_download_pensum{
+    width: 110px;
+  }
+}
 
 
 /* ------- media query (ipad pro +) laptop --------- */
@@ -418,8 +467,28 @@ button {
     font-size: 4.5em;
   }
 
+  .h1-black{
+    font-size: 4.5em;
+  }
+
   h2 {
     font-size: 2.5em;
+  }
+
+  p{
+    font-size: 1em;
+  }
+
+  .p_width_welcome{
+    padding: 0em 16em;
+  }
+
+  .p_width_news{
+    padding: 0em 10em;
+  }
+
+  .page{
+    padding: 7em 16em;
   }
 
 
@@ -509,14 +578,27 @@ button {
    font-size: 1.5em;
  }
 
+ /* ===================================== for medlemmer ===================================== */
 
- /* ===================================== 404 ===================================== */
-
-  .billede-404 {
-    width: 30%;
+  /* -- Pensum -- */
+  .members_pensum_belts{
+    padding: 1em 8em;
   }
 
-  /*===== footer =====*/ 
+  .belt{
+    width: 120px;
+    height: 120px;
+    padding: 1em 3em;
+  }
+
+  .btn_download_pensum{
+    width: 91.6px;
+    height: 29px;
+    margin-top: -70px;
+    margin-left: 65px;
+  }
+
+  /*===================================== footer =====================================*/ 
   .footer_section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -536,6 +618,12 @@ button {
 
   .footer_some{
     flex-direction: row;
+  }
+
+   /* ===================================== 404 ===================================== */
+
+  .billede-404 {
+    width: 30%;
   }
 
 

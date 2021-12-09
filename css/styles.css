@@ -140,8 +140,11 @@ button {
 .lil-button {
   background-color: var(--red);
   font-size: 18px;
-  display: none;
   margin: 0 0 0 -34px;
+}
+
+.hide {
+  display: none;
 }
 
 
@@ -202,10 +205,6 @@ button {
 .nav-menu.active {
   left: 0;
 }
-
-
-
-
 
 /* ===================================== Landing page ===================================== */
 
@@ -448,10 +447,7 @@ button {
 /* -------------- media query tablet --------------- */
 @media screen and (max-width: 950px) and (min-width: 672px) {
 
-  .page{
-    padding: 7em 10em;
-  }
-
+  
   /* ===================================== for medlemmer ===================================== */
 
   /* -- Pensum -- */
@@ -498,9 +494,7 @@ button {
     padding: 0em 10em;
   }
 
-  .page{
-    padding: 7em 16em;
-  }
+ 
 
 
   /* ===================================== NAVIGATION ===================================== */

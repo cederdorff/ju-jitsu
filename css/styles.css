@@ -5,9 +5,9 @@
 
 /* ---------- root variables ---------- */
 :root {
-  --skrift: #000000;
+  --skrift: #373333;
   --darkGray: #262626;
-  --bg: #fbfbfb;
+  --bg: #fafafa;
   --gray: #a3a3a3;
   --red: #A01518;
   --redTrans: rgba(160, 21, 24, 0.7);
@@ -123,6 +123,7 @@ button {
   box-shadow: 0 2px 5px var(--gray);
   display: block;
   margin: 1.5em auto;
+  cursor: pointer;
 
 }
 
@@ -157,6 +158,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  border-bottom: 2px solid var(--red);
 }
 
 .bar {
@@ -237,9 +239,13 @@ button {
   margin: 1.5em 0;
 }
 
-.billeder {
+.billeder-phone {
   margin: 1.5em 0;
   width: 100%;
+}
+
+.billeder-desktop {
+  display: none;
 }
 
 .holdnavn {
@@ -250,8 +256,17 @@ button {
 
 /* ===================================== Medlems siden ===================================== */
 
+.page_members{
+  padding: 7em 0 2em 0;
+}
+
+.members_welcome_message{
+  margin: 2em 1.5em;
+}
+
 .belt-liga {
   min-height: 400px;
+  margin: 2em 1.5em;
 }
 
 .belt-grid {
@@ -282,7 +297,7 @@ button {
 } 
 
 .beltdisplay-pic {
-  height: 600px;
+  height: 510px;
   display: block;
   margin: auto;
 }
@@ -323,6 +338,16 @@ button {
   background-color: rgba(168, 168, 168, 0.2);
 } 
 
+/* ===== Nyheder - "for melemmer siden ===== */
+
+.members_news{
+  margin: 2em 1.5em 1em 1.5em;
+}
+
+.facebook{
+  margin: 1em 1em 2em 1em;
+}
+
 /* ===== Pensum - "for melemmer siden ===== */
 .members_pensum_btn {
   display: flex;
@@ -348,10 +373,6 @@ button {
   justify-content: space-evenly;
 }
 
-#belt_childrent_hide{
-  display: none;
-}
-
 .btn_download_pensum{
   position: absolute;
   height: 25px;
@@ -362,6 +383,32 @@ button {
   font-size: 14px;
 }
 
+/* ===== bind bælte - "for melemmer siden ===== */
+.tie_belt_h2{
+  position: relative;
+  padding-bottom: 3em;
+}
+
+.members_bottm{
+  margin: 2em 1.5em;
+}
+
+#to-top{
+  color: var(--offRed);
+  width: 130px;
+  background-color: none;
+  background-color: var(--bg);
+  box-shadow: none;
+}
+
+.edit_button{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 90px;
+  right: 1em;
+  cursor: pointer;
+}
 
 /* ===================================== footer ===================================== */
 
@@ -374,7 +421,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  border-top: 0.1em solid var(--red);
+  border-top: 2px solid var(--red);
 }
 
 .article_footer{
@@ -385,16 +432,17 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .partner_img_JJN{
   width: 6em;
   padding-top: 0.5em;
+  cursor: pointer;
 }
 
 .partner_img_IF{
   width: 3.5em;
+  cursor: pointer;
 }
 
 .p_footer{
@@ -412,6 +460,7 @@ button {
 .fb_img{
   width: 3em;
   padding-bottom: 0.5em;
+  cursor: pointer;
 }
 
 .p_mail{
@@ -450,6 +499,10 @@ button {
   
   /* ===================================== for medlemmer ===================================== */
 
+  .page_members{
+    padding: 7em 8em 5em 8em;
+  }
+
   /* -- Pensum -- */
   .members_pensum_belts{
     padding: 1em 0em;
@@ -463,6 +516,10 @@ button {
 
   .btn_download_pensum{
     width: 110px;
+  }
+
+  .facebook{
+    margin: 2em 6em;
   }
 }
 
@@ -479,19 +536,11 @@ button {
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.6em;
   }
 
   p{
     font-size: 1em;
-  }
-
-  .p_width_welcome{
-    padding: 0em 16em;
-  }
-
-  .p_width_news{
-    padding: 0em 10em;
   }
 
  .lil-button {
@@ -572,10 +621,15 @@ button {
  .hold-billeder {
    margin: 1.5em 0;
  }
+
+ .billeder-phone{
+   display: none;
+ }
  
- .billeder {
+ .billeder-desktop {
+   display: block;
    margin: 0em 0;
-   width: 100%;
+   width: 60%;
  }
  
  .holdnavn {
@@ -585,9 +639,43 @@ button {
    font-size: 1.5em;
  }
 
+ .flex{
+   display: flex;
+   flex-direction: row;
+ }
+
+  .text_right_of_img{
+    width: 30%;
+  }   
+
  /* ===================================== for medlemmer ===================================== */
 
+  .p_width_welcome{
+    padding: 0em 8em;
+  }
+
+  .p_width_news{
+    padding: 0em 10em;
+  }
+
+  .beltdisplay-pic {
+    height: 600px;
+  }
+
+ .page_members{
+  padding: 7em 23em 2em 23em;
+  }
+
   /* -- Pensum -- */
+
+  .members_pensum_btn{
+    margin-left: 13em;
+  }
+
+  #btn-adult, #btn-children{
+    margin: 1.5em 1em;
+  }
+  
   .members_pensum_belts{
     padding: 1em 8em;
   }
@@ -603,6 +691,23 @@ button {
     height: 29px;
     margin-top: -70px;
     margin-left: 65px;
+  }
+
+  .facebook{
+    margin: 2em 16em;
+  }
+
+  #btn-logout{
+    position: absolute;
+    top: 100px;
+    right: 7em;
+  }
+
+  .edit_button{
+    width: 40px;
+    height: 40px;
+    top: 180px;
+    right: 11em;
   }
 
   /*===================================== footer =====================================*/ 

@@ -61,3 +61,11 @@ document.querySelector("#btn-children").onclick = () => btn_children();
 // 		$(".btn_belt_children").text("... Se mindre");
 // 	}
 // });
+
+// ===========  scrool to top på "for medlemmer" i bunden ===========  //
+function to_top() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+
+document.querySelector("#to-top").onclick = () => to_top();

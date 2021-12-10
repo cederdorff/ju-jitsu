@@ -254,6 +254,14 @@ button {
   color: var(--bg);
 }
 
+.text_right_of_img h2 {
+  display: none;
+}
+
+.text_left_of_img h2 {
+  display: none;
+}
+
 /* ===================================== Medlems siden ===================================== */
 
 .page_members{
@@ -395,10 +403,11 @@ button {
 
 #to-top{
   color: var(--offRed);
-  width: 130px;
+  width: 200px;
   background-color: none;
   background-color: var(--bg);
   box-shadow: none;
+  text-decoration: underline;
 }
 
 .edit_button{
@@ -494,7 +503,7 @@ button {
 
 
 /* -------------- media query tablet --------------- */
-@media screen and (max-width: 950px) and (min-width: 672px) {
+@media screen and (max-width: 1050px) and (min-width: 672px) {
 
   
   /* ===================================== for medlemmer ===================================== */
@@ -525,7 +534,7 @@ button {
 
 
 /* ------- media query (ipad pro +) laptop --------- */
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1050px) {
 
   h1 {
     font-size: 4.5em;
@@ -655,44 +664,44 @@ button {
   .text_right_of_img{
     width: 30%;
     position: relative;
-    left: 60em;
-    bottom: 20em;
+    left: 60%;
+    bottom: 350px;
   }   
 
-  .h2_right_of_img{
-    width: 30%;
-    position: relative;
-    left: 30em;
-    top: 7em;
+  .text_right_of_img h2 {
+    display: block;
+    position: absolute;
+    top: -1.5em;
+  }
+
+  .mobile-headline{
+    display: none;
   }  
 
   .text_left_of_img{
     width: 30%;
     position: relative;
-    left: 10em;
-    bottom: 22em;
+    left: 5%;
+    bottom: 350px;
   }  
 
-  .h2_left_of_img{
-    width: 30%;
-    position: relative;
-    top: 6em;
-    left: 4em;
-  }  
-
-  .home_good_start{
-    position: static;
+  .text_left_of_img h2 {
+    display: block;
+    position: absolute;
+    top: -1.5em;
   }
+
+  /* .home_good_start{
+    position: static;
+  } */
   
 
   .home_about_club{
-    margin: -13.8em 1.5em;
-    position: static;
+    margin: -189px 1.5em;
   }
 
   .home_trial_training{
-    margin: -16.2em 1.5em -10em 1.5em;
-    position: static;
+    margin: -227px 1.5em;
   }
 
  /* ===================================== for medlemmer ===================================== */

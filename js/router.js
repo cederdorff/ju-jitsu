@@ -130,6 +130,8 @@ function hideAllPages() {
 export function navigateTo(path) {
 	window.history.pushState({}, path, _basePath + path);
 	showPage(path);
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 }
 
 /**

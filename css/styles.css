@@ -583,14 +583,18 @@ button {
 
   /* ===================================== Landing page ===================================== */
 
-.landing-video-desktop {
-  display: block;
-  width: 100%;
- }
+  .home_page{
+    padding: 7em 0 0 0;
+  }
 
- .landing-video-mobile {
+  .landing-video-desktop {
+    display: block;
+    width: 100%;
+  }
+
+  .landing-video-mobile {
    display: none;
- }
+  }
  
  .redbox {
    width: 80%;
@@ -617,6 +621,13 @@ button {
    display: flex;
    justify-content: space-around;
  }
+
+ .holdnavn {
+    text-align: center;
+    margin: -3.3em 0 2em 0;
+    color: var(--bg);
+    font-size: 1.5em;
+  }
  
  .hold-billeder {
    margin: 1.5em 0;
@@ -631,12 +642,9 @@ button {
    margin: 0em 0;
    width: 60%;
  }
- 
- .holdnavn {
-   text-align: center;
-   margin: -3.3em 0 2em 0;
-   color: var(--bg);
-   font-size: 1.5em;
+
+ .img-right-desktop{
+    margin-left: 40%;
  }
 
  .flex{
@@ -646,7 +654,46 @@ button {
 
   .text_right_of_img{
     width: 30%;
+    position: relative;
+    left: 60em;
+    bottom: 20em;
   }   
+
+  .h2_right_of_img{
+    width: 30%;
+    position: relative;
+    left: 30em;
+    top: 7em;
+  }  
+
+  .text_left_of_img{
+    width: 30%;
+    position: relative;
+    left: 10em;
+    bottom: 22em;
+  }  
+
+  .h2_left_of_img{
+    width: 30%;
+    position: relative;
+    top: 6em;
+    left: 4em;
+  }  
+
+  .home_good_start{
+    position: static;
+  }
+  
+
+  .home_about_club{
+    margin: -13.8em 1.5em;
+    position: static;
+  }
+
+  .home_trial_training{
+    margin: -16.2em 1.5em -10em 1.5em;
+    position: static;
+  }
 
  /* ===================================== for medlemmer ===================================== */
 

@@ -208,6 +208,11 @@ button {
   left: 0;
 }
 
+/* ===== Venstre navigation på undersider ===== */
+.left_naviagtin_page{
+  display: none;
+}
+
 /* ===================================== Landing page ===================================== */
 
 .landing-video-desktop {
@@ -589,6 +594,21 @@ button {
   nav .current {
     font-weight: 700;
   }
+
+  /* ===== Venstre navigation på undersider ===== */
+  .left_naviagtin_page{
+    display: block;
+    position: fixed;
+    top: 200px;
+    left: 7em;
+  }
+
+  .left-nav{
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+
+  
 
   /* ===================================== Landing page ===================================== */
 

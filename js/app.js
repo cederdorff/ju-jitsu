@@ -27,6 +27,17 @@ document.querySelectorAll(".nav-link").forEach(link =>
 		})
 );
 
+//highlighter den side man er på
+// const header = document.getElementById("nav-menu");
+// const  navt = header.getElementsByClassName(".nav-item");
+// for (var i = 0; i < navt.length; i++) {
+// 	navt[i].addEventListener("click", function() {
+// 	const  current = document.getElementsByClassName("active");
+//   current[0].className = current[0].className.replace(" active", "");
+//   this.className += " active";
+//   });
+// }
+
 
 // ===========  hide og show knap til pensum på "for medlemmer" ===========  //
 function btn_adult() {

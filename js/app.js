@@ -60,8 +60,8 @@ function btn_children() {
 		}
 }
 
-document.querySelector("#btn-adult").onclick = () => btn_adult();
-document.querySelector("#btn-children").onclick = () => btn_children();
+// document.querySelector("#btn-adult").onclick = () => btn_adult();
+// document.querySelector("#btn-children").onclick = () => btn_children();
 
 // =  hide og show knap til pensum børne pensum på "for medlemmer" =  //
 // function btn_belt_children.click(() =>{
@@ -80,3 +80,44 @@ function to_top() {
 }
 
 document.querySelector("#to-top").onclick = () => to_top();
+
+// ===========  Rediger bruger ===========  //
+async function getUserData(){
+	const authUser =_auth.currentUser;
+	const docRef = doc(_userRef, authUser.uid);
+	const docsnap = await getDoc(docRef);
+	const userData = docSnap.data();
+
+	return {
+		...authUser,
+		...userData
+	};
+}
+
+async function appendUserData() { //ligger i firebase auth under userAuthenticated
+	const user = await getUserData();
+	document.querySelector("#name").value = user.name || user.displayName;
+	document.querySelector("#mail").value = user.email;
+	document.querySelector("#phone").value = user.phone || "";
+	document.querySelector("#beltType").value = user.beltTye || "";
+	document.querySelector("#imagePreview").src = user.img || "img/placeholder.jpg";
+}
+
+async function updateUser() {
+	// showLoader(true);
+	const userToUpdate = {
+		name: document.querySelector("#name").value,
+		mail: document.querySelector("#mail").value,
+		phone: document.querySelector("#phone").value,
+		beltType: document.querySelector("#beltType").value,
+		img: document.querySelector("#imagePreview").src
+	};
+	const userRef = doc(_usersRef, _auth.currentUser.uid);
+	await setDoc(userRef, userToUpdate, { merge: true });
+	// showLoader(false);
+}
+
+// =========== attach events =========== //
+document.querySelector("#btn-adult").onclick = () => btn_adult();
+document.querySelector("#btn-children").onclick = () => btn_children();
+window.updateUser = () => updateUser();

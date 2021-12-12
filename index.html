@@ -240,7 +240,7 @@
             <article class="members_bottm">
                 <button id="btn-logout">Log ud</button>
                 <button id="to-top">Tilbage til toppen</button>
-                <img class="edit_button" src="img/rediger_profil.png" alt="Rediger profil knap">
+                <a href="#/profile"><img class="edit_button" src="img/rediger_profil.png" alt="Rediger profil knap"></a>
 
                 <div class="left_naviagtin_page">
                     <ul class="left-nav">
@@ -259,9 +259,22 @@
             </article>
         </section>
 
-        <section id="profile" class="page">
+        <section id="profile" class="page"> 
             <h2>Profile</h2>
             <button id="btn-logout">Log ud</button>
+            <form class="form">
+                <input type="file" id="imgFile" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
+                    <img id="imagePreview" class="image-preview">
+                <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Type your name" required>
+                <label for="mail">Mail</label>
+                    <input type="email" id="mail" placeholder="Type your mail" required>
+                <label for="phone">Phone</label>
+                    <input type="email" id="phone" placeholder="Type your telefon nr." required>
+                <label for="beltType">Belt Type</label>
+                    <input type="text" id="beltType" placeholder="Type your belt type" required>
+                <button type="button" name="button" onclick="updateUser()">Save</button>
+              </form>
 
         </section>
 

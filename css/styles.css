@@ -147,6 +147,11 @@ button {
   display: none;
 }
 
+.active-btn {
+  border: 2px solid var(--red);
+  color: var(--red);
+  background-color: var(--bg);
+}
 /* ===================================== NAVIGATION ===================================== */
 
 .navbar {

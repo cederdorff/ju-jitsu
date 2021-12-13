@@ -39,14 +39,18 @@ document.querySelectorAll(".nav-link").forEach(link =>
 // }
 
 
-// ===========  hide og show knap til pensum på "for medlemmer" ===========  //
+// =======================================  hide og show knap til pensum på "for medlemmer" ==========================================  //
 function btn_adult() {
 	const x = document.getElementById("adult_pensum");
 		if (x.style.display === "block") {
 	 		x.style.display = "none";
+			document.getElementById("btn-adult").classList.remove("active-btn");
+			
 		} else {
 	  		x.style.display = "block";
 	  		document.getElementById("children_pensum").style.display = "none";
+			  document.getElementById("btn-children").classList.remove("active-btn");
+			document.getElementById("btn-adult").classList.add("active-btn");
 		}
 }
 
@@ -54,11 +58,18 @@ function btn_children() {
 	const x = document.getElementById("children_pensum");
 		if (x.style.display === "block") {
 	  		x.style.display = "none";
+			  document.getElementById("btn-children").classList.remove("active-btn");
+			  
 		} else {
 	  		x.style.display = "block";
 	  		document.getElementById("adult_pensum").style.display = "none";
+			  document.getElementById("btn-adult").classList.remove("active-btn");
+			  document.getElementById("btn-children").classList.add("active-btn");
 		}
 }
+
+document.querySelector("#btn-adult").onclick = () => btn_adult();
+document.querySelector("#btn-children").onclick = () => btn_children();
 
 // document.querySelector("#btn-adult").onclick = () => btn_adult();
 // document.querySelector("#btn-children").onclick = () => btn_children();

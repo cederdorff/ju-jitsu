@@ -94,6 +94,7 @@ async function getUserData(){
 	};
 }
 
+
 async function appendUserData() { //ligger i firebase auth under userAuthenticated
 	const user = await getUserData();
 	document.querySelector("#name").value = user.name || user.displayName;

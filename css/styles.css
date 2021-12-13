@@ -6,20 +6,18 @@
 /* ---------- root variables ---------- */
 :root {
   --skrift: #373333;
-  --darkGray: #262626;
+  --darkGray: rgb(55, 51, 51, 0.7);
   --bg: #fafafa;
-  --gray: #a3a3a3;
-  --red: #A01518;
+  --gray: #e8e8e8;
+  --red: #a01518;
   --redTrans: rgba(160, 21, 24, 0.7);
   --offRed: #973638;
 }
 
 /* ===================================== general styling ===================================== */
-
 html {
   color: var(--skrift);
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -27,7 +25,6 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
 }
-
 
 header {
   background-color: var(--bg);
@@ -68,26 +65,26 @@ h2 {
   text-align: center;
 }
 
-.h2_left{
-  text-align: left
+.h2_left {
+  text-align: left;
 }
 
-h3{
+h3 {
   font-family: co-headline, sans-serif;
   font-style: normal;
   font-size: 1.2em;
   text-align: center;
 }
 
-p{
-  font-size: 1em ;
+p {
+  font-size: 1em;
 }
 
-.p_center{
+.p_center {
   text-align: center;
 }
 
-.p_mellemrum{
+.p_mellemrum {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -124,7 +121,6 @@ button {
   display: block;
   margin: 1.5em auto;
   cursor: pointer;
-
 }
 
 .page {
@@ -147,7 +143,6 @@ button {
 .hide {
   display: none;
 }
-
 
 /* ===================================== NAVIGATION ===================================== */
 
@@ -209,14 +204,14 @@ button {
 }
 
 /* ===== Venstre navigation på undersider ===== */
-.left_naviagtin_page{
+.left_naviagtin_page {
   display: none;
 }
 
 /* ===================================== Landing page ===================================== */
 
 .landing-video-desktop {
- display: none;
+  display: none;
 }
 
 .redbox {
@@ -269,11 +264,11 @@ button {
 
 /* ===================================== Medlems siden ===================================== */
 
-.page_members{
+.page_members {
   padding: 7em 0 2em 0;
 }
 
-.members_welcome_message{
+.members_welcome_message {
   margin: 2em 1.5em;
 }
 
@@ -302,19 +297,18 @@ button {
     "belt-display . .";
 }
 
- .belt-display {
+.belt-display {
   grid-area: belt-display;
   /* background-image: url(../img/beltdisplay.png);
   background-size: contain;
   background-repeat: no-repeat; */
-} 
+}
 
 .beltdisplay-pic {
   height: 510px;
   display: block;
   margin: auto;
 }
-
 
 .black-belt {
   grid-area: black-belt;
@@ -349,15 +343,15 @@ button {
 .white-belt {
   grid-area: white-belt;
   background-color: rgba(168, 168, 168, 0.2);
-} 
+}
 
 /* ===== Nyheder - "for melemmer siden ===== */
 
-.members_news{
+.members_news {
   margin: 2em 1.5em 1em 1.5em;
 }
 
-.facebook{
+.facebook {
   margin: 1em 1em 2em 1em;
 }
 
@@ -367,46 +361,53 @@ button {
   flex-direction: row;
 }
 
-#adult_pensum, #children_pensum {
-	display: none;
+#adult_pensum,
+#children_pensum {
+  display: none;
 }
 
 #adult_pensum {
-	display: block;
+  display: block;
 }
 
-.belt{
+.belt {
   width: 100px;
   height: 100px;
 }
 
-.belt_adult, .belt_children, #belt_childrent_hide{
+.belt_adult,
+.belt_children,
+#belt_childrent_hide {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.btn_download_pensum{
+.belt_children:active {
+  background-color: black;
+}
+
+.btn_download_pensum {
   position: absolute;
   height: 25px;
   width: 96px;
-  opacity: 70%;
+  background-color: var(--redTrans);
   margin-top: -46px;
   cursor: pointer;
   font-size: 14px;
 }
 
 /* ===== bind bælte - "for melemmer siden ===== */
-.tie_belt_h2{
+.tie_belt_h2 {
   position: relative;
   padding-bottom: 3em;
 }
 
-.members_bottm{
+.members_bottm {
   margin: 2em 1.5em;
 }
 
-#to-top{
+#to-top {
   color: var(--offRed);
   width: 200px;
   background-color: none;
@@ -415,7 +416,7 @@ button {
   text-decoration: underline;
 }
 
-.edit_button{
+.edit_button {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -423,7 +424,26 @@ button {
   right: 1em;
   cursor: pointer;
 }
+.members_video_tie_belt {
+  z-index: 1;
+}
+/* ===================================== bruger profil ===================================== */
 
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  background-color: var(--gray);
+}
+/* ===================================== Log ind ===================================== */
+.center {
+  text-align: center;
+}
 /* ===================================== footer ===================================== */
 
 .footer_section {
@@ -432,38 +452,38 @@ button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   border-top: 2px solid var(--red);
 }
 
-.article_footer{
+.article_footer {
   margin: 2em 1.5em;
 }
 
-.partner{
+.partner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.partner_img_JJN{
+.partner_img_JJN {
   width: 6em;
   padding-top: 0.5em;
   cursor: pointer;
 }
 
-.partner_img_IF{
+.partner_img_IF {
   width: 3.5em;
   cursor: pointer;
 }
 
-.p_footer{
+.p_footer {
   font-weight: 600;
 }
 
-.footer_some{
+.footer_some {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,13 +491,13 @@ button {
   margin-right: auto;
 }
 
-.fb_img{
+.fb_img {
   width: 3em;
   padding-bottom: 0.5em;
   cursor: pointer;
 }
 
-.p_mail{
+.p_mail {
   color: var(--red);
   text-decoration: underline;
   padding-top: 1em;
@@ -506,46 +526,41 @@ button {
   text-decoration: underline;
 }
 
-
 /* -------------- media query tablet --------------- */
 @media screen and (max-width: 1050px) and (min-width: 672px) {
-
-  
   /* ===================================== for medlemmer ===================================== */
 
-  .page_members{
+  .page_members {
     padding: 7em 8em 5em 8em;
   }
 
   /* -- Pensum -- */
-  .members_pensum_belts{
+  .members_pensum_belts {
     padding: 1em 0em;
   }
 
-  .belt{
+  .belt {
     padding: 0.7em;
     width: 110px;
     height: 110px;
   }
 
-  .btn_download_pensum{
+  .btn_download_pensum {
     width: 110px;
   }
 
-  .facebook{
+  .facebook {
     margin: 2em 6em;
   }
 }
 
-
 /* ------- media query (ipad pro +) laptop --------- */
 @media screen and (min-width: 1050px) {
-
   h1 {
     font-size: 4.5em;
   }
 
-  .h1-black{
+  .h1-black {
     font-size: 4.5em;
   }
 
@@ -553,14 +568,13 @@ button {
     font-size: 2.6em;
   }
 
-  p{
+  p {
     font-size: 1em;
   }
 
- .lil-button {
-   display: block;
- }
-
+  .lil-button {
+    display: block;
+  }
 
   /* ===================================== NAVIGATION ===================================== */
 
@@ -596,23 +610,21 @@ button {
   }
 
   /* ===== Venstre navigation på undersider ===== */
-  .left_naviagtin_page{
+  .left_naviagtin_page {
     display: block;
     position: fixed;
     top: 200px;
     left: 7em;
   }
 
-  .left-nav{
+  .left-nav {
     justify-content: space-between;
     margin: 30px 0;
   }
 
-  
-
   /* ===================================== Landing page ===================================== */
 
-  .home_page{
+  .home_page {
     padding: 7em 0 0 0;
   }
 
@@ -622,71 +634,71 @@ button {
   }
 
   .landing-video-mobile {
-   display: none;
+    display: none;
   }
- 
- .redbox {
-   width: 80%;
-   margin-top: -21.6em;
-   height: 520px;
- }
- 
- .headline {
-   margin: -18em 1.5em 10em 7em;
-   width: 30em;
- }
 
- .subliner {
-   display: none;
- }
+  .redbox {
+    width: 80%;
+    margin-top: -21.6em;
+    height: 520px;
+  }
 
- .subliner-desktop {
-   display: block;
-   text-align: left;
-   margin: 1em 0;
- }
+  .headline {
+    margin: -18em 1.5em 10em 7em;
+    width: 30em;
+  }
 
- .hold {
-   display: flex;
-   justify-content: space-around;
- }
+  .subliner {
+    display: none;
+  }
 
- .holdnavn {
+  .subliner-desktop {
+    display: block;
+    text-align: left;
+    margin: 1em 0;
+  }
+
+  .hold {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .holdnavn {
     text-align: center;
     margin: -3.3em 0 2em 0;
     color: var(--bg);
     font-size: 1.5em;
   }
- 
- .hold-billeder {
-   margin: 1.5em 0;
- }
 
- .billeder-phone{
-   display: none;
- }
- 
- .billeder-desktop {
-   display: block;
-   margin: 0em 0;
-   width: 60%;
- }
+  .hold-billeder {
+    margin: 1.5em 0;
+  }
 
- .img-right-desktop{
+  .billeder-phone {
+    display: none;
+  }
+
+  .billeder-desktop {
+    display: block;
+    margin: 0em 0;
+    width: 60%;
+  }
+
+  .img-right-desktop {
     margin-left: 40%;
- }
+  }
 
- .flex{
-   display: flex;
-   flex-direction: row;
- }
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
 
-  .text_right_of_img{
+  .text_right_of_img {
     width: 30%;
     position: relative;
     left: 60%;
     bottom: 350px;
-  }   
+  }
 
   .text_right_of_img h2 {
     display: block;
@@ -694,16 +706,16 @@ button {
     top: -1.5em;
   }
 
-  .mobile-headline{
+  .mobile-headline {
     display: none;
-  }  
+  }
 
-  .text_left_of_img{
+  .text_left_of_img {
     width: 30%;
     position: relative;
     left: 5%;
     bottom: 350px;
-  }  
+  }
 
   .text_left_of_img h2 {
     display: block;
@@ -714,23 +726,22 @@ button {
   /* .home_good_start{
     position: static;
   } */
-  
 
-  .home_about_club{
+  .home_about_club {
     margin: -189px 1.5em;
   }
 
-  .home_trial_training{
+  .home_trial_training {
     margin: -227px 1.5em;
   }
 
- /* ===================================== for medlemmer ===================================== */
+  /* ===================================== for medlemmer ===================================== */
 
-  .p_width_welcome{
+  .p_width_welcome {
     padding: 0em 8em;
   }
 
-  .p_width_news{
+  .p_width_news {
     padding: 0em 10em;
   }
 
@@ -738,81 +749,86 @@ button {
     height: 600px;
   }
 
- .page_members{
-  padding: 7em 23em 2em 23em;
+  .page_members {
+    padding: 7em 23em 2em 23em;
   }
 
   /* -- Pensum -- */
 
-  .members_pensum_btn{
+  .members_pensum_btn {
     margin-left: 13em;
   }
 
-  #btn-adult, #btn-children{
+  #btn-adult,
+  #btn-children {
     margin: 1.5em 1em;
   }
-  
-  .members_pensum_belts{
+
+  .members_pensum_belts {
     padding: 1em 8em;
   }
 
-  .belt{
+  .belt {
     width: 120px;
     height: 120px;
     padding: 1em 3em;
   }
 
-  .btn_download_pensum{
+  .btn_download_pensum {
     width: 91.6px;
     height: 29px;
     margin-top: -70px;
     margin-left: 65px;
   }
 
-  .facebook{
-    margin: 2em 16em;
+  .facebook {
+    margin: 2em 14em;
   }
 
-  #btn-logout{
+  #btn-logout {
     position: absolute;
     top: 100px;
     right: 7em;
+    margin: 1.5em -1.5em 0 0;
   }
 
-  .edit_button{
+  .edit_button {
     width: 40px;
     height: 40px;
     top: 180px;
     right: 11em;
+    margin: 0 -1.9em 0 0;
   }
 
-  /*===================================== footer =====================================*/ 
+  /*===================================== footer =====================================*/
   .footer_section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-        flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-      -ms-flex-align: center;
-        align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 0 10%;
   }
 
-  .footer_some{
+  .footer_some {
     flex-direction: row;
   }
 
-   /* ===================================== 404 ===================================== */
+  .fb_img {
+    margin-right: 15px;
+  }
+
+  /* ===================================== 404 ===================================== */
 
   .billede-404 {
     width: 30%;
   }
-
-
 }

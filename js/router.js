@@ -81,7 +81,7 @@ function logout() {
 function scrollToTop() {
 	document.body.scrollTop = 0; // For Safari
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
+}
 
 
 
@@ -109,7 +109,8 @@ document.querySelector("#btn-logout").onclick = () => logout();
 	"#/": "home",
 	"#/login": "login",
 	"#/medlemmer": "medlemmer",
-	"#/404": "page-404"
+	"#/404": "page-404",
+	"#/profile": "profile"
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -155,9 +156,9 @@ function showPage(path) {
 function setActiveTab(path) {
 	for (const link of _navLinks) {
 		if (path === link.getAttribute("href")) {
-			link.classList.add("active");
+			link.classList.add("current");
 		} else {
-			link.classList.remove("active");
+			link.classList.remove("current");
 		}
 	}
 }

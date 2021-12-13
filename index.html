@@ -259,20 +259,18 @@
             </article>
         </section>
 
-        <section id="profile" class="page"> 
-            <h2>Profile</h2>
+        <section id="profile" class="page">
+            <h2>Rediger profil</h2>
             <button id="btn-logout">Log ud</button>
             <form class="form">
+                
                 <input type="file" id="imgFile" accept="image/*" onchange="previewImage(this.files[0], 'imagePreview')">
-                    <img id="imagePreview" class="image-preview">
-                <!-- <label for="name"></label> -->
-                    <input type="text" id="name" placeholder="Dit fulde navn" required>
-                <!-- <label for="mail"></label> -->
-                    <input type="email" id="mail" placeholder="Din e-mail" required>
-                <!-- <label for="phone"></label> -->
-                    <input type="number" id="phone" placeholder="Dit telefonnummer" required>
-                <!-- <label for="beltType"></label> -->
-                    <input type="text" id="beltType" placeholder="Vælg din belt type" required>
+                <img id="imagePreview" class="image-preview">
+                <input class="form_fill_text" type="text" id="name" placeholder=" Dit fulde navn" required>
+                <input class="form_fill_text" type="email" id="mail" placeholder=" Din e-mail" required>
+                <input class="form_fill_text" type="number" id="phone" placeholder=" Dit telefonnummer" required>
+                <input class="form_fill_text" type="text" id="beltType" placeholder=" Vælg din bælte type" required>
+                
                 <button type="button" name="button" onclick="updateUser()">Save</button>
               </form>
 

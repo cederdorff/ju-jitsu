@@ -1,3 +1,6 @@
+::placeholder {
+  color: var(--darkGray);
+}
 * {
   padding: 0;
   margin: 0;
@@ -383,7 +386,7 @@ button {
   justify-content: space-evenly;
 }
 
-.belt_children:active {
+.belt_children::after {
   background-color: black;
 }
 
@@ -427,17 +430,22 @@ button {
 .members_video_tie_belt {
   z-index: 1;
 }
-/* ===================================== bruger profil ===================================== */
+/* ===================================== bruger profil ===================================== */ /*rettet 13.12.21*/
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.input {
+input {
+  height: 56px;
+  width: 350px;
+  margin: 13px auto;
+}
+
+.form_fill_text {
   background-color: var(--gray);
 }
 /* ===================================== Log ind ===================================== */
@@ -799,7 +807,20 @@ button {
     right: 11em;
     margin: 0 -1.9em 0 0;
   }
+/* ===================================== bruger profil ===================================== */ /*rettet 13.12.21*/
 
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  height: 56px;
+  width: 440px;
+  margin: 10px auto;
+}
   /*===================================== footer =====================================*/
   .footer_section {
     display: -webkit-box;
